@@ -43,15 +43,10 @@ vim.o.termguicolors = true
 
 
 
-
-
-
-
-
 vim.opt.clipboard = "unnamedplus" -- allow nvim to access system clipboard
 vim.opt.cmdheight = 2             -- allow more height in neovim cmd
 vim.opt.fileencoding = "utf-8"    -- default encoding
-vim.opt.mouse = "a"               -- allow use of mouse in all modes
+vim.opt.mouse = "i"               -- allow use of mouse in all modes
 vim.opt.termguicolors = true
 vim.opt.pumheight = 10            -- pop up menu height
 vim.opt.showtabline = 2           -- always show tabs
