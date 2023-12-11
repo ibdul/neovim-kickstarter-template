@@ -16,6 +16,7 @@ return {
 				"~/p*cts/*", -- glob pattern is supported
 				"~/code space/*/*",
 				"~/code space/playground/compilers/*",
+				"~/code space/playground/rust/*",
 				"~/projects/*",
 				"~/projects/repos/*",
 				"~/.config/*",
