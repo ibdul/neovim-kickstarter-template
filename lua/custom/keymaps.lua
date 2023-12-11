@@ -11,7 +11,7 @@ vim.g.maplocalleader = " "
 
 -- modes
 -- normal = n
--- inser = i
+-- insert = i
 -- visual = v
 -- visual block = x
 -- terminal = t
@@ -44,8 +44,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 --Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
-
 
 
 --INSERT--
@@ -83,13 +81,32 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
+
+
+--COMMAND--
+--imporoved navigation
+keymap("c", "<C-k>", "<Up>", { noremap = true })
+keymap("c", "<C-j>", "<Down>", { noremap = true })
+keymap("c", "<C-h>", "<Left>", { noremap = true })
+keymap("c", "<C-l>", "<Right>", { noremap = true })
+
+--yanking and pasting
+keymap("c", "<C-p>", "<C-R>", { noremap = true })
+keymap("c", "<C-y>", function()
+	vim.fn.setreg('', vim.fn.getcmdline())
+end, { noremap = true })
+
+
+
+
+
 --PLUGINS--
 
 --telescope
 keymap("n", "<leader>f",
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope live_grep_args<cr>", opts)
 
 
 keymap("n", "<A-i>", ":exe v:count1 . 'ToggleTerm' <CR> ", opts)
