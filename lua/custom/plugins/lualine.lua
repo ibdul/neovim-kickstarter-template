@@ -1,6 +1,6 @@
-local function clock()
-	return os.date("%I:%M:%S", os.time())
-end
+--[[ local function clock() ]]
+--[[ 	return os.date("%I:%M:%S", os.time()) ]]
+--[[ end ]]
 
 return {
 	-- Set lualine as statusline
@@ -31,7 +31,7 @@ return {
 			lualine_c = { 'filename' },
 			lualine_x = { 'encoding', 'fileformat', 'filetype' },
 			lualine_y = { 'progress' },
-			lualine_z = { 'location', clock }
+			lualine_z = { 'location' }
 		},
 		inactive_sections = {
 			lualine_a = {},
