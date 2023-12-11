@@ -31,7 +31,8 @@ keymap("n", "<leader>pv", ":Telescope file_browser path=%:p:h select_buffer=true
 --buffer delete
 keymap("n", "<leader>x", ":Bdelete<CR>", opts)
 
---[[ keymap("n", "<leader>e", ":Lex 30<cr>", opts) ]]
+-- Copy whole file content to clipboard with C-c
+keymap("n", "<C-c>", ":%y+<CR>", opts)
 
 
 --resize with arrows
@@ -56,6 +57,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 --stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Better paste
+-- remap "p" in visual mode to delete the highlighted text without overwriting your yanked/copied text, and then paste the content from the unnamed register.
 keymap("v", "p", '"_dp', opts)
 
 -- move text up and down
@@ -95,9 +99,6 @@ keymap("c", "<C-p>", "<C-R>", { noremap = true })
 keymap("c", "<C-y>", function()
 	vim.fn.setreg('', vim.fn.getcmdline())
 end, { noremap = true })
-
-
-
 
 
 --PLUGINS--
