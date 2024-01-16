@@ -15,6 +15,7 @@ return {
 			projects = {
 				"~/p*cts/*", -- glob pattern is supported
 				"~/code space/*/*",
+				"~/code space/plugins/*",
 				"~/code space/playground/compilers/*",
 				"~/code space/playground/rust/*",
 				"~/projects/*",
