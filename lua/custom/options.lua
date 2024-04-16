@@ -43,6 +43,11 @@ vim.o.termguicolors = true
 
 
 
+--[[ tab width ]]
+--
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+
 vim.opt.clipboard = "unnamedplus" -- allow nvim to access system clipboard
 vim.opt.cmdheight = 2             -- allow more height in neovim cmd
 vim.opt.fileencoding = "utf-8"    -- default encoding
