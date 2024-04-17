@@ -26,7 +26,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- file browser
-keymap("n", "<leader>pv", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
+keymap("n", "<leader>d", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 
 --buffer delete
 keymap("n", "<leader>x", ":Bdelete<CR>", opts)
@@ -34,6 +34,15 @@ keymap("n", "<leader>x", ":Bdelete<CR>", opts)
 -- Copy whole file content to clipboard with C-c
 keymap("n", "<C-c>", ":%y+<CR>", opts)
 
+-- yank and paste to sys clipboard
+keymap("n", "<leader>y", '"+y<CR>', opts)
+keymap("v", "<leader>y", '"+y<CR>', opts)
+keymap("x", "<leader>y", '"+y<CR>', opts)
+keymap("t", "<leader>y", '"+y<CR>', opts)
+keymap("n", "<leader>p", '"+p<CR>', opts)
+keymap("v", "<leader>p", '"+p<CR>', opts)
+keymap("x", "<leader>p", '"+p<CR>', opts)
+keymap("t", "<leader>p", '"+p<CR>', opts)
 
 --resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
