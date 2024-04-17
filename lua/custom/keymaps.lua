@@ -32,7 +32,8 @@ keymap("n", "<leader>d", ":Telescope file_browser path=%:p:h select_buffer=true<
 keymap("n", "<leader>x", ":Bdelete<CR>", opts)
 
 -- Copy whole file content to clipboard with C-c
-keymap("n", "<C-c>", ":%y+<CR>", opts)
+keymap("n", "<C-c>", ":%y<CR>", opts)
+keymap("n", "<leader><C-c>", ":%y+<CR>", opts)
 
 -- yank and paste to sys clipboard
 keymap("n", "<leader>y", '"+y<CR>', opts)
